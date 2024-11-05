@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css"> <!-- Caminho relativo para o CSS -->
+    <title>Barber Service</title>
+</head>
+<body>
+    <div class="background">
+        <!-- Início header -->
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <a href="index.html">Barber</a>
+                    </div>
+                    <ul class="ul">
+                        
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Contato</a></li>
+                       <!-- <li><a href="cadastro-barbearia.html"><button class="cadastro-barbearia">Cadastro Barbearia</button></a></li> -->
+                        <li><a href="../js/login-cliente.html"><button class="btn-cliente">Login Clientes</button></a></li>
+                        <li><a href="login-barbeiro.html"><button class="btn-login">Login Barbeiros</button></a></li>
+                       <!-- <li><a href="#"><button class="btn-gradiente">Começar</button></a></li> -->
+                    </ul>
+                    <div class="menu-icon">
+                        <img src="../img/menu.png" alt="Ícone do menu"> <!-- Caminho relativo para a imagem -->
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- Fim header -->
+
+        <main>
+         <!--Carrossel-->
+           <!--Carrossel-->
+<div class="carrossel">
+    <!-- Título no carrossel -->
+    <div class="carrossel-titulo">
+        <h5>Barbearias em Destaque</h5>
+    </div>
+    
+    <div class="mensagem-carrossel">
+        <h3>Invicttus Barber Club</h3>
+        <p>Um novo conceito de Barbearia e Estética masculina para proporcionar a você um estilo invencível.</p>
+        <button class="btn-login">AGENDAR HORÁRIO NO WHATSAPP</button>
+    </div>
+    
+    <div class="slides">
+        <img src="../img/background1.png" alt="primeiro slide" class="ativo">
+        <img src="../img/img1.png" alt="segundo slide">
+        <img src="../img/img3.png" alt="terceiro slide">
+    </div>
+    
+    <button class="anterior" onclick="moverSlide(-1)">&#10094;</button>
+    <button class="prox" onclick="moverSlide(1)">&#10095;</button>
+</div>
+
+           <!--Fim carrossel--> 
+            <div class="container">
+                <!-- Main Text -->
+                <div class="main-text">
+                    <h1>O Melhor da Região</h1>
+                    <h2>Moderno & Clássico</h2>
+                    <div>
+                        <button class="btn-login">Agende seu Horário</button>
+                        <img src="../img/verificado.png" alt="Verificado">
+                    </div>
+                </div>
+                <!-- Fim main text -->
+
+                <!-- Main img -->
+                <div class="main-img">
+                    <img src="../img/background1.png" alt="Penteando Cabelo">
+                </div>
+                <!-- Fim img -->
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script> <!-- Certifique-se de que o caminho para o JavaScript também é relativo -->
+    <section class="info-barbearia container">
+        <h2>Informações da Barbearia</h2>
+        <hr class="linha-titulo">
+        <div class="info-cards">
+            <!-- Barbearias Cadastradas -->
+            <div class="info-card">
+                <h3>Barbearias Cadastradas</h3>
+                <ul>
+                    <li>Barbearia Invicttus</li>
+                    <li>Barbearia Moderno</li>
+                    <li>Barbearia Clássica</li>
+                    <li>Barbearia Estilo</li>
+                </ul>
+            </div>
+            
+            <!-- Barbeiros Cadastrados -->
+            <div class="info-card">
+                <h3>Barbeiros Cadastrados</h3>
+                <ul>
+                    <li>Sidney</li>
+                    <li>João</li>
+                    <li>Marcos</li>
+                    <li>Carlos</li>
+                </ul>
+            </div>
+            
+            <!-- Localização -->
+            <div class="info-card">
+                <h3>Contato</h3>
+                <p>Rua Principal, 123, Centro</p>
+                <p>Cidade: São Paulo</p>
+                <p>Estado: SP</p>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

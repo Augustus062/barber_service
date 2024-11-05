@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    
+        --verde-escuro: #14424b;
+        --verde: #2f9364;
+        --orange: #ff7c37;
+        --degrade-btn: linear-gradient(#fe9611, #ff5c00);
+        --color-p: #a1a1a1;
+        --color-p-2: #868585;
+        --preto-titulos: #242424;
+    
+}
+
+body{
+    background-color: var(--preto-titulos);
+    font: "Poppins", sans-serif;
+}
+.container{
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+/* Menu */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+.logo a{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.ul{
+    display: flex;
+    align-items: center;
+
+}
+.ul li{
+    margin: 0 35px;
+    font-size: 15px;
+}
+.ul li a{
+    color: white;
+    transition: color 0.3s ease;
+}
+.ul li a:hover{
+    color: var(--orange);
+}
+
+.btn-barbearia{
+    padding: 9px 15px;
+    color: white;
+    background-image: var(--degrade-btn);
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-cliente{
+    padding: 9px 15px;
+    color: white;
+    background-image: var(--degrade-btn);
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-comecar{
+    padding: 9px 15px;
+    color: white;
+    background-image: var(--degrade-btn);
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.menu-icon{
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Estilos específicos para o formulário de cadastro */
+
+.titulo h1{/* Titulo da pagina */
+    color: white;
+}
+
+.form-cadastro {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+
+}
+
+.form-group label {
+    padding: 9px 15px;
+    color: white;
+    background-image: var(--degrade-btn);
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border: 2px solid var(--orange);
+}
+.btn-cadastro{
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    background-image: var(--degrade-btn);
+    color: red;
+}
+.btn-gradiente {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;  
+}
+
+.btn-entrar{
+    background-image: var(--degrade-btn);
+}
+.btn-entrar{
+    background-color: var(--degrade-btn);
+    width: 50%;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+.btn-cadastro{
+    background-color: var(--degrade-btn);
+    padding: 10.5px;
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 18.5%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+}
