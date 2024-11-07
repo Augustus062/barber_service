@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cadastro.css", > <!-- Mantém o mesmo CSS para consistência -->
-    <title>Cadastro de Barbearia - Barber Service</title>
+    <link rel="stylesheet" href="/barber_service/css/cadastro copy.css">
+    <title>Formulário</title>
 </head>
+
 <body>
-    <div class="background-verde">
-        <!-- Header (Mantém o mesmo cabeçalho da página inicial) -->
-        <header>
-            <div class="container">
-                <nav>
-                    <div class="logo">
-                        <a href="index.html">Barber</a>
+    <div class="container">
+        <div class="form-image">
+            <img src="/barber_service/img/undraw_login_re_4vu2.svg" alt="">
+        </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
                     </div>
-                    <ul class="ul">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a href="#"><button class="btn-barbearia">Login Barbearia</button></a></li>
-                        <!--<li><a href="#"><button class="btn-cliente">Login Cliente</button></a></li> -->
-                       <!-- <li><a href="#"><button class="btn-comecar">Começar</button></a></li> -->
-                    </ul>
-                    <div class="menu-icon">
-                        <img src="../img/menu.png" alt="Ícone do menu">
+                    <div class="login-button">
+                        <button><a href="/barber_service/js/login-cliente.html">Login</a></button>
                     </div>
-                </nav>
-            </div>
-        </header>
-        <!-- Fim Header -->
+                </div>
 
-        <!-- Conteúdo Principal da Subpágina -->
-        <main>
-            <div class="titulo"><h1>Cadastro</h1></div>
-            <section class="container">
-                
-                <hr class="linha-titulo">
-
-                <form class="form-cadastro">
-                    <div class="form-group">
-                        <label for="nome">Nome da Barbearia</label>
-                        <input type="text" id="nome" name="nome" placeholder="Digite o nome da barbearia" required>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="name">Nome completo</label>
+                        <input id="name" type="text" name="name" placeholder="Digite seu nome completo" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="endereco">Endereço</label>
-                        <input type="text" id="endereco" name="endereco" placeholder="Digite o endereço" required>
+                    <div class="input-box">
+                        <label for="Barbearia">Nome da Barbearia</label>
+                        <input id="Barbearia" type="text" name="Nome da Barbearia" placeholder="Digite o nome da Barbearia" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="telefone">Telefone</label>
-                        <input type="text" id="telefone" name="telefone" placeholder="Digite o telefone" required>
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Digite o email" required>
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
                     </div>
 
-                    <button type="submit" class="btn-cadastro">Cadastrar Barbearia</button>
-                </form>
-            </section>
-        </main>
+
+                    <div class="input-box">
+                        <label for="confirmPassword">Confirme sua Senha</label>
+                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
+                    </div>
+
+                </div>
+                <div class="continue-button">
+                    <button><a href="#">Continuar</a> </button>
+                </div>
+            </form>
+        </div>
     </div>
-    
-    <script src="main.js"></script>
 </body>
+
 </html>
