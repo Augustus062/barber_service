@@ -44,6 +44,18 @@ main h2::before {
     background: linear-gradient(45deg, #777632, #ff5c00);
 }
 
+/* Estilo do link dentro do h2 */
+main h2 a {
+    color: inherit; /* Herda a cor do h2 */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+/* Remove a cor roxa ao visitar o link */
+main h2 a:visited {
+    color: inherit; /* Mantém a cor do h2 mesmo após visita */
+}
+
+
 form {
     display: flex;
     flex-direction: column;
