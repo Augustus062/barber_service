@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -32,27 +32,8 @@ body {
     padding: 0 5%;
     margin: 0 auto;
 }
-.cadastro-barbearia{ /* botão do menu */
-    padding: 9px 15px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    background-image: var(--degrade-btn);
-    transition: background 0.3s ease;
-}
-.btn-cliente {
-    padding: 9px 15px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    background-image: var(--degrade-btn);
-    transition: background 0.3s ease;
-}
 
-.btn-barbearia:hover {
-    background-image: linear-gradient(#ff5c00, #fe9611); /* Inverte as cores no hover */
-}
-.btn-login {
+.cadastro-barbearia, .btn-cliente, .btn-login {
     padding: 9px 15px;
     color: white;
     border: none;
@@ -61,13 +42,16 @@ body {
     transition: background 0.3s ease;
 }
 
-.btn-login:hover {
-    background-image: linear-gradient(#ff5c00, #fe9611); /* Inverte as cores no hover */
+.btn-barbearia:hover, .btn-login:hover, .btn-cadastro:hover {
+    background-image: linear-gradient(#ff5c00, #fe9611);
 }
 
+.btn-cadastro {
+    padding: 9px 15px;
+    font-weight: bold;
+}
 
-
-/* Classe do site */
+/* Menu de navegação */
 nav {
     display: flex;
     justify-content: space-between;
@@ -117,7 +101,6 @@ main .container {
     font-size: 4.5rem;
 }
 
-
 .main-text div {
     display: flex;
     align-items: center;
@@ -141,170 +124,110 @@ main .container {
 }
 
 /* Carrossel */
+/* Estilo atualizado para o carrossel */
 .carrossel {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Alinha o texto e as imagens */
-    background: linear-gradient(to right, #000000 40%, transparent 60%); /* Degradê semelhante ao exemplo */
-    padding: 50px;
-    border-radius: 10px;
-    max-width: 1440px;
-    margin: auto;
     overflow: hidden;
+    margin: 50px auto;
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #111; /* Fundo escuro */
 }
 
-/* Título centralizado na parte superior do carrossel */
-.carrossel-titulo {
+.carrossel-titulo h5 {
     position: absolute;
-    top: 1%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    padding: 1px 30px;
-    border-radius: 5px;
-    font-size: 35px;
-    z-index: 25;
-    text-align: center;
+    top: 10px;
+    left: 15px;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 10;
 }
 
 .mensagem-carrossel {
-    color: white;
-    font-size: 1.5rem;
-    max-width: 40%; /* Limita a largura do texto */
-    line-height: 1.5;
-    text-align: left;
-    padding: 20px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    z-index: 10;
+    color: #fff;
+    max-width: 400px;
 }
 
 .mensagem-carrossel h3 {
-    font-size: 5rem; /* Ajuste do tamanho do título */
-    font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: 600;
     margin-bottom: 10px;
+    color: #ff9900; /* Destaque com laranja */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .mensagem-carrossel p {
-    font-size: 1.5rem; /* Ajuste do tamanho da descrição */
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
-.btn-contato{
-    color: white;
-    background-color: var(--degrade-btn);
+.mensagem-carrossel button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff6600;
     border: none;
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
+    border-radius: 5px;
     cursor: pointer;
-}
-.btn-cadastro:hover{
-    background-image: linear-gradient(#ff5c00, #fe9611);
+    transition: background-color 0.3s ease;
 }
 
-
-.btn-cadastro {
-    padding: 9px 15px;
-    color: white;
-    background-image: var(--degrade-btn);
-    transition: background 0.3s ease;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    
-}
-
-.btn-gradiente:hover {
-    background-image: linear-gradient(#ff5c00, #fe9611); /* Efeito de hover */
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 60%; /* Ajusta a largura das imagens */
-    position: relative; /* Para permitir o controle das setas */
+.mensagem-carrossel button:hover {
+    background-color: #e65c00;
 }
 
 .slides img {
     width: 100%;
-    flex-shrink: 0;
+    display: none;
+    border-radius: 10px;
 }
 
-.prox, .anterior {
+.slides img.ativo {
+    display: block;
+}
+
+.anterior, .prox {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
     border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
     border-radius: 50%;
-    z-index: 5;
-    transition: background 0.3s ease;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .anterior {
-    left: -30px; /* Ajusta a posição para fora da imagem */
+    left: 10px;
 }
 
 .prox {
-    right: -30px; /* Ajusta a posição para fora da imagem */
+    right: 10px;
 }
 
-.prox:hover, .anterior:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+.anterior:hover, .prox:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
 }
-/* fim do carrossel */
 
-/* Responsividade */
-@media (max-width: 960px) {
-    .menu-icon {
-        display: block;
-    }
 
-    .ul {
-        position: fixed;
-        background: var(--preto-titulos);
-        top: 0;
-        width: 100%;
-        height: 100%;
-        left: 100%;
-        transition: 0.3s;
-        flex-direction: column;
-        justify-content: center;
-        z-index: 9; /* Para garantir que esteja acima de outros elementos */
-    }
 
-    .ul li {
-        font-size: 20px;
-        margin: 20px 0px;
-    }
-
-    .ul.ativo {
-        left: 0;
-    }
-
-    main .container {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    main .container .main-img,
-    main .container .main-text {
-        width: 100%;
-        text-align: center;
-    }
-
-    main .container .main-text h1 {
-        font-size: 3.5rem; /* Reduzido para melhor ajuste em telas menores */
-    }
-
-    main .container .main-text div {
-        justify-content: center;
-    }
-}
-/* Info barbearia/barbeiros cadastrados */
-
-/* Seção de informações da barbearia */
+/* Info Cards */
 .info-cliente {
     padding: 40px 0;
     text-align: center;
@@ -317,7 +240,6 @@ main .container {
     color: var(--preto-titulos);
 }
 
-/* Estilo dos cartões de informação */
 .info-cards {
     display: flex;
     justify-content: space-between;
@@ -334,7 +256,7 @@ main .container {
     min-width: 250px;
 }
 
-.info-card h3 { /* titulo info */
+.info-card h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
     color: white;
@@ -351,25 +273,91 @@ main .container {
     color: white;
 }
 
-.info-card p {
-    font-size: 1.2rem;
-    color: white;
-}
-.linha-servicos{
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+/* Responsividade */
+@media (max-width: 960px) {
+    nav {
+        flex-direction: column;
+    }
 
-}
-.linha-titulo{
-    border: 0;
-    height: 1px; /* Espessura da linha */
-    background-color: #ff5c00;
-    width: 50%; /*largura da linha */
-    margin: 2% auto; /* centralizar a linha na horizontal */
-}
-.titulo-cadastro{
-    color: white;
+    .menu-icon {
+        display: block;
+    }
+
+    .ul {
+        display: none;
+        position: fixed;
+        background: var(--preto-titulos);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        transition: 0.3s;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 9;
+    }
+
+    .ul.ativo {
+        left: 0;
+    }
+
+    main .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .main-text, .main-img {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-text h1 {
+        font-size: 3.5rem;
+    }
 }
 
+@media (max-width: 768px) {
+    .carrossel {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .mensagem-carrossel {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .slides {
+        width: 100%;
+    }
+
+    .btn-cadastro, .btn-cliente, .btn-login {
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .info-cards {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.3rem;
+    }
+
+    .info-cards {
+        flex-direction: column;
+    }
+
+    .btn-cadastro, .btn-cliente, .btn-login {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
